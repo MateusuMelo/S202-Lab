@@ -1,0 +1,10 @@
+[
+    {
+        "_id": {
+            "$oid": "64ef91b6fefc6807c085993b"
+        },
+        "weaknesses": [
+            "Ground"
+        ]
+    }
+]
