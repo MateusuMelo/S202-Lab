@@ -25,7 +25,7 @@ class ProductAnalyzer:
         ])
         return writeAJson(data, "Mais vendido")
 
-    def maisGasto(self):
+    def cliente_com_mais_Gasto(self):
         data = self.dataset.collection.aggregate([
             {"$unwind": "$produtos"},
             {"$group": {"_id": {"cliente": "$cliente_id", "data": "$data_compra"},
