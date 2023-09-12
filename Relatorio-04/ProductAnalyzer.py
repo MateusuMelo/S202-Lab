@@ -1,12 +1,10 @@
 from database import Database as Data
 from writeAJson import writeAJson
 
-
 class ProductAnalyzer:
     def __init__(self):
         self.dataset = Data(database="mercado", collection="produtos")
         self.dataset.resetDatabase()
-
     def vendasPDia(self):
         data = self.dataset.collection.aggregate([
             {"$unwind": "$produtos"},
