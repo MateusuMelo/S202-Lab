@@ -1,6 +1,5 @@
 from typing import Collection
 import pymongo # pip install pymongo
-from dataset.dataset import dataset
 
 
 class Database:
