@@ -3,9 +3,9 @@ from neo4j import GraphDatabase
 class Database:
     def __init__(self):
         pass
-    
+
     def connect(self):
-        self._driver = GraphDatabase.driver('neo4j+s://f08621b4.databases.neo4j.io', auth=('neo4j', 'UtRsFSYanL1-Mvj1uZ4War-uiW-oicu-y8LizZoLbpA'))
+        self._driver = GraphDatabase.driver('LinkDatabaseNeo4j', auth=('seuUser', 'seutoken'))
 
     def close(self):
         self._driver.close()
