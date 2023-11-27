@@ -26,7 +26,7 @@ class Cliente:
         self.database.update(query, {"$set": {"Exames.$.Status": "concluido"}})
         for exame in self.exames:
             if(exame['DataPedido'] == dataExame):
-                set_exame = Exame(exame['Responsavel'], exame['Tipo']).ConcluirPedidoExame(exame['DataPedido'])
+                set_exame = Exame(exame['Responsavel'], exame['Tipo']).concluirPedidoExame(exame['DataPedido'])
                 update_data = {
                     "$set": {
                         "Exames.$": set_exame

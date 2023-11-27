@@ -14,7 +14,7 @@ class Exame:
         return args
 
 
-    def ConcluirPedidoExame(self,dataPedido):
+    def concluirPedidoExame(self,dataPedido):
 
         args = {"Status":"Concluido",
                 "DataPedido": f"{dataPedido}",
