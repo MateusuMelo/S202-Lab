@@ -48,16 +48,16 @@ class CLI(SimpleCLI):
             print("======================")
             while True:
                 print("-----Opcoes do Cliente: ")
-                print("Para gerar um pedido exame digite: Pedido")
-                print("Para Concluir um exame: Concluir")
-                opcao = input("Insira um comando: ")
+                print("--- MENU CLIENTE --- Para gerar um pedido exame digite: Pedido")
+                print("--- MENU CLIENTE --- Para Concluir um exame: Concluir")
+                opcao = input("--- MENU CLIENTE --- Insira um comando: ")
                 if opcao == "Pedido":
-                    responsavel = input("Insira o Nome do responsavel pelo exame")
-                    tipo = input("Insira o tipo do exame")
+                    responsavel = input("Insira o Nome do responsavel pelo exame: ")
+                    tipo = input("Insira o tipo do exame: ")
                     result.pedido(responsavel,tipo)
                     break
                 elif opcao == "Concluir":
-                    data = input("Insira a data do pedido do exame")
+                    data = input("Insira a data do pedido do exame: ")
                     result.concluirExame(data)
                     break
                 else:
