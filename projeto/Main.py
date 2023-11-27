@@ -14,5 +14,5 @@ while True:
         break
     break
 print(f"Laboratorio escolhido:{labs[int(command)-1].endereco}")
-teacherCLI = CLI(labs[int(command)-1])
-teacherCLI.run()
+laboratorioCLI = CLI(labs[int(command)-1])
+laboratorioCLI.run()
