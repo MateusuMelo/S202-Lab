@@ -9,8 +9,6 @@ class Database:
             self.ClusterConnectrion = pymongo.MongoClient("mongodb://localhost:27017")
             self.db = self.ClusterConnectrion['projeto']
             self.collection = self.db['Lab']
-            print(type(self.db))
-            print("conectado ao banco com sucesso")
         except Exception as e:
             print("Um erro ocorreu ", e)
 

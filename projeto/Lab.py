@@ -11,18 +11,30 @@ class Laboratorio:
                     "Cpf": f"{cliente.cpf}",
                     "Exames": []
                 }
-        self.data.insert(cliente)
+        try:
+            self.data.insert(cliente)
+            print("Cadastrado com Sucesso")
+        except Exception as e:
+            print("Ocorreu um erro ao cadastrar, erro:", e)
+
 
     def buscaCliente(self, nome:str):
         query = {"Nome":f"{nome}"}
-        result = self.data.find(query)
-        print(result)
-        return result
+        try:
+            result = self.data.find(query)
+
+            client = Cliente(result['Nome'],result['Cpf'])
+            return client
+        except Exception as e:
+            print("Ocorreu um erro ao buscar, erro:", e)
+            return None
+
 
     def removeCliente(self, nome:str):
         query = {"Nome":f"{nome}"}
-        result = self.data.delete(query)
-        print(result)
-        return result
-
-
+        try:
+            result = self.data.delete(query)
+            print(result)
+            return result
+        except Exception as e:
+            print("Ocorreu um erro ao Deletar, erro:", e)

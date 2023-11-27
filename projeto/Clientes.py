@@ -7,8 +7,9 @@ class Cliente:
         self.cpf = cpf
         self.database = Database()
         try:
-            self.exames = self.database.find({"Nome": "Mateus Melo"})['Exames']
+            self.exames = self.database.find({"Nome": f"{nome}"})['Exames']
         except Exception as e:
+            print(e)
             self.exames = []
         
     def pedido(self, responsavel:str, tipo:str):
