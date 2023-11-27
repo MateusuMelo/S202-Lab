@@ -40,7 +40,7 @@ class Database:
     def update(self, query, update):
         try:
             self.connect()
-            result = self.collection.update_one(query, {'$set': update})
+            result = self.collection.update_one(query, update)
             return result
         except Exception as e:
             print(e)
